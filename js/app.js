@@ -209,7 +209,7 @@ q.addEventListener("keydown", (e) => {
   else if (e.key === "Enter" && results.length) { e.preventDefault(); pick(results[Math.max(active, 0)]); }
   else if (e.key === "Escape") close();
 });
-sugg.addEventListener("mousedown", (e) => { const li = e.target.closest("[role=option]"); if (li) pick(results[+li.id.slice(1)]); });
+sugg.addEventListener("pointerdown", (e) => { e.preventDefault(); const li = e.target.closest("[role=option]"); if (li && li.id) pick(results[+li.id.slice(1)]); });
 document.addEventListener("click", (e) => { if (!e.target.closest(".search")) close(); });
 
 /* ---------- Controls ---------- */
