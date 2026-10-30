@@ -11,7 +11,7 @@ body { min-height: 100vh; font: 16px/1.5 var(--sans); color: var(--fg); backgrou
 :focus-visible { outline: 2px solid var(--acc); outline-offset: 2px; }
 .bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
 .logo { font: 400 2rem/1 var(--serif); letter-spacing: -.5px; margin-right: auto; }
-.search { position: relative; flex: 1 1 260px; order: 3; min-width: 0; }
+.search { position: relative; z-index: 10000; flex: 1 1 260px; order: 3; min-width: 0; }
 @media (min-width: 820px) { .search { order: 0; flex: 0 1 380px; } }
 input { width: 100%; padding: 11px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--glass); backdrop-filter: blur(16px); color: var(--fg); font: inherit; }
 input::placeholder { color: var(--mut); }
